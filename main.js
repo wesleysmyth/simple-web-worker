@@ -5,6 +5,7 @@ var result = document.querySelector('.result');
 
 if (!!window.Worker) {
 	var myWorker = new Worker("worker.js");
+	console.log(myWorker);
 
 	first.onchange = function() {
 	  myWorker.postMessage([first.value,second.value]);
